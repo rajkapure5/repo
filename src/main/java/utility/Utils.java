@@ -38,5 +38,10 @@ public class Utils {
 		return password;
 	
 }
+	public String verifylogin() {
+	String verify=property1.getProperty("verifyloginurl");
+	System.out.println(verify);
+		return verify;
+	}
 	
 }

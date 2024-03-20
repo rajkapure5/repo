@@ -40,12 +40,11 @@ Utils util;
 				
 		}		
 		
-		public void  click() {
+		public void click() {
 			
 			btn.click();
+			
 		
-			
-			
 			
 			
 		}

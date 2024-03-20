@@ -33,7 +33,8 @@ public class Test1 extends BaseClass {
 		 						login.click();
 		 						login.getcookie();
 		 						driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
-		
+		 						homepage=new Homepage(driver);
+		 						Assert.assertEquals(util.verifylogin(), homepage.very());
 	
 }
 	@Test(priority=2)
@@ -53,12 +54,12 @@ public class Test1 extends BaseClass {
 	Assert.assertTrue(false);
 	
 	}
-	@AfterMethod
-		public void screen(ITestResult result) throws IOException {
-			if(result.getStatus()==ITestResult.FAILURE) {
-				TakesScreenshot	screen1=((TakesScreenshot)driver);
-				File get = screen1.getScreenshotAs(OutputType.FILE);
-					Files.copy(get, new File("C:\\Users\\Administrator\\eclipse-workspace\\latestpractice\\screenshot\\screenshot1.jpg"));
-	}
-	}
+	//@AfterMethod
+	//	public void screen(ITestResult result) throws IOException {
+	//		if(result.getStatus()==ITestResult.FAILURE) {
+	//			TakesScreenshot	screen1=((TakesScreenshot)driver);
+		//		File get = screen1.getScreenshotAs(OutputType.FILE);
+		//			Files.copy(get, new File("C:\\Users\\Administrator\\eclipse-workspace\\latestpractice\\screenshot\\screenshot1.jpg"));
+	//}
+	//}
 }

@@ -20,11 +20,17 @@ public class BaseClass {
 	public Homepage homepage;
 	public Loginpage login;
 	@BeforeMethod
-	public void openBrowser() throws IOException {
-		util=new Utils();
-		System.setProperty("webdriver.chromedriver", "D:\\Important File\\newchromedriver\\chromedriver_win32\\chromedriver.exe");
+	public void openBrowser() {
+		try {
+			util=new Utils();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.setProperty("webdriver.chrome.driver","D:\\Important File\\new chrome driver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 			ChromeOptions option=new ChromeOptions();
 			option.addArguments("--remote-allow-origins=*");
+			
 		    driver=new ChromeDriver(option);
 			driver.get(util.getUrl());
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,6 +38,6 @@ public class BaseClass {
 	}
 	@AfterMethod
 	public void closeBrowser() {
-		
+		driver.close();
 	}
 }

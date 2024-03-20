@@ -16,7 +16,10 @@ public class Homepage {
 		@FindBy(id="add-to-cart-sauce-labs-backpack") WebElement addtocart;
 		@FindBy(xpath="//div[@id='shopping_cart_container']/a") WebElement cart; 
 		
-	
+	public String very() {
+		String s=driver.getCurrentUrl();
+		return s;
+	}
 public void addproduct() {
 	addtocart.click();
 	
@@ -24,6 +27,5 @@ public void addproduct() {
 
 public void clickcart() {
 	cart.click();
-	
 }
 }

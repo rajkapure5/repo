@@ -13,7 +13,6 @@ public class Cartpage {
 	}
 
 	@FindBy(id="remove-sauce-labs-backpack") WebElement removeproduct;
-	@FindBy(id="remove-remove-product") WebElement removeproduct1;
 	@FindBy(id="continue-shopping") WebElement continueshopping;
 
 	public void removep() {
