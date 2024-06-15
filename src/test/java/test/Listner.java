@@ -13,6 +13,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -25,6 +26,9 @@ public class Listner implements ITestListener {
 	ExtentSparkReporter htmlreoprt;
 	ExtentReports extendrepor;
 	ExtentTest test;
+	WebDriver driver;
+	
+	
 public void extendrepo() {
 	htmlreoprt =new ExtentSparkReporter("C:\\Users\\Administrator\\eclipse-workspace\\latestpractice\\extendreport\\extendreport.html");
 	extendrepor =new ExtentReports();
@@ -54,29 +58,20 @@ public void extendrepo() {
 	}
 
 	@Override
+	
 	public void onTestFailure(ITestResult result) {
+	
 		System.out.println("test case is failed"+result.getName());
 		test =extendrepor.createTest(result.getName());
-		test.log(Status.FAIL, MarkupHelper.createLabel("Failed test name is "+result.getName(), ExtentColor.RED));
-			WebDriver driver=new ChromeDriver();
-		
-			if(result.getStatus()==ITestResult.FAILURE) {
-				TakesScreenshot	screen1=((TakesScreenshot)driver);
-				File get = screen1.getScreenshotAs(OutputType.FILE);
-					try {
-						Files.copy(get, new File("C:\\Users\\Administrator\\eclipse-workspace\\latestpractice\\screenshot\\screenshot1.jpg"));
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-	}			
-}
+		test.log(Status.FAIL, MarkupHelper.createLabel("failed test name is "+result.getName(), ExtentColor.RED));
+	}
+	
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("test case is skipped"+result.getName());
 		test =extendrepor.createTest(result.getName());
-		test.log(Status.SKIP, MarkupHelper.createLabel("Failed test name is "+result.getName(), ExtentColor.ORANGE));
+		test.log(Status.SKIP, MarkupHelper.createLabel("skipped test name is "+result.getName(), ExtentColor.ORANGE));
 	}
 
 	@Override
@@ -90,5 +85,7 @@ public void extendrepo() {
 		System.out.println("it will execute after test invoked");
 		extendrepor.flush();
 	}
+
+	
 
 }

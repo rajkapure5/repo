@@ -25,7 +25,8 @@ public void addproduct() {
 	
 }
 
-public void clickcart() {
+public Cartpage clickcart() {
 	cart.click();
+	return new Cartpage(driver);
 }
 }

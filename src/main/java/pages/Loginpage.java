@@ -32,31 +32,26 @@ Utils util;
 
 
 		public void username(String usr,String pwd) {
-			//wait=new WebDriverWait (driver,Duration.ofSeconds(10));
-			//wait.until(ExpectedConditions.elementToBeClickable(username));
 			username.sendKeys(usr);
 		
 			passwordd.sendKeys(pwd);
 				
 		}		
 		
-		public void click() {
+		public Homepage click() {
 			
-			btn.click();
-			
-		
-			
-			
+			btn.click();	
+			return new Homepage(driver);
 		}
 		
-		public void getcookie() {
-			Cookie cooki=new Cookie("Raj","123456789");
-			driver.manage().addCookie(cooki);
-			driver.manage().deleteCookie(cooki);
-			Set<Cookie> ck=driver.manage().getCookies();
-			for(Cookie c:ck) {
-			System.out.println(c);
-		}
-}
+		//public void getcookie() {
+			//Cookie cooki=new Cookie("Raj","123456789");
+			//driver.manage().addCookie(cooki);
+			//driver.manage().deleteCookie(cooki);
+			//Set<Cookie> ck=driver.manage().getCookies();
+			//for(Cookie c:ck) {
+			//System.out.println(c);
+		//}
+//}
 
 }

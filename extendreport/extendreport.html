@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Extend Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 20, 2024 08:55:50 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 14, 2024 12:55:26 AM</span></a>
 </li>
 </ul>
 </div>
@@ -68,6 +68,7 @@
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -82,7 +83,7 @@
           <div class="test-detail">
             <p class="name">loginPage</p>
             <p class="text-sm">
-              <span>8:56:02 AM</span> / <span>00:00:00:008</span>
+              <span>12:55:39 AM</span> / <span>00:00:00:010</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -91,9 +92,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">loginPage</h5>
-<span class='badge badge-success'>03.20.2024 8:56:02 AM</span>
-<span class='badge badge-danger'>03.20.2024 8:56:02 AM</span>
-<span class='badge badge-default'>00:00:00:008</span>
+<span class='badge badge-success'>06.14.2024 12:55:39 AM</span>
+<span class='badge badge-danger'>06.14.2024 12:55:39 AM</span>
+<span class='badge badge-default'>00:00:00:010</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,7 +107,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:56:02 AM</td>
+        <td>12:55:39 AM</td>
         <td>
           <span class='badge white-text green'>pass test name is loginPage</span>
         </td>
@@ -123,7 +124,7 @@
           <div class="test-detail">
             <p class="name">cart</p>
             <p class="text-sm">
-              <span>8:56:19 AM</span> / <span>00:00:00:000</span>
+              <span>12:55:54 AM</span> / <span>00:00:00:000</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -132,8 +133,8 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">cart</h5>
-<span class='badge badge-success'>03.20.2024 8:56:19 AM</span>
-<span class='badge badge-danger'>03.20.2024 8:56:19 AM</span>
+<span class='badge badge-success'>06.14.2024 12:55:54 AM</span>
+<span class='badge badge-danger'>06.14.2024 12:55:54 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -147,9 +148,50 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>8:56:19 AM</td>
+        <td>12:55:54 AM</td>
         <td>
-          <span class='badge white-text red'>Failed test name is cart</span>
+          <span class='badge white-text red'>failed test name is cart</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">skip</p>
+            <p class="text-sm">
+              <span>12:55:57 AM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">skip</h5>
+<span class='badge badge-success'>06.14.2024 12:55:57 AM</span>
+<span class='badge badge-danger'>06.14.2024 12:55:57 AM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>12:55:57 AM</td>
+        <td>
+          <span class='badge white-text orange'>skipped test name is skip</span>
         </td>
       </tr>
   </tbody>
@@ -171,13 +213,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 20, 2024 08:55:50 AM</h3>
+<h3>Jun 14, 2024 12:55:26 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 20, 2024 08:56:21 AM</h3>
+<h3>Jun 14, 2024 12:55:57 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -205,13 +247,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
+<div><small data-tooltip='33%'>
 <b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='33%'><b>1</b> tests failed,
+<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -228,10 +270,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='33%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='50%'><b>1</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='33%'><b>1</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -247,7 +289,7 @@
 </div></div>
 <script>
 var timeline = {
-"loginPage":0.008,"cart":0
+"loginPage":0.01,"cart":0,"skip":0.001
 };
 </script>
 <div class="row">
@@ -277,7 +319,7 @@ parentCount: 5,
 passParent: 1,
 failParent: 1,
 warningParent: 0,
-skipParent: 0,
+skipParent: 1,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -294,7 +336,7 @@ eventsCount: 5,
 passEvents: 1,
 failEvents: 1,
 warningEvents: 0,
-skipEvents: 0,
+skipEvents: 1,
 infoEvents: 0
 };
 </script>        </div>

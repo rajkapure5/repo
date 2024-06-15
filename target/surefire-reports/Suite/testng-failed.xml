@@ -8,7 +8,9 @@
     <classes>
       <class name="test.Test1">
         <methods>
+          <include name="skip"/>
           <include name="cart"/>
+          <include name="screen"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>
         </methods>
